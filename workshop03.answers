@@ -54,8 +54,7 @@ Implement a function quadRoots :: Double -> Double -> Double -> [Double],
 which computes the roots of the quadratic equation defined by
 0 = a*x^2 + b*x + c, given a, b, and c.  See 
 http://en.wikipedia.org/wiki/Quadratic_formula for the formula.
-What is the inferred type of the function if you comment out the type
-declaration? What does this tell you?
+What is the tell you?
 
 ANSWER
 

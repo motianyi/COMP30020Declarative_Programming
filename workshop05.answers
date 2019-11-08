@@ -39,6 +39,12 @@ This function is defined in the standard library as 'zipWith'.
 
 ANSWER
 
+zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]
+zipWith _ [] [] = []
+zipWith _ [] (_:_) = error "zipWith: list length mismatch"
+zipWith _ (_:_) [] = error "zipWith: list length mismatch"
+zipWith f (x:xs) (y:ys) = (f x y):(zipWith f xs ys)
+
 >zWith f [] _ = []
 >zWith f _ [] = []
 >zWith f (x:xs) (y:ys) = f x y : zWith f xs ys
