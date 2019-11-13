@@ -71,3 +71,7 @@ pour(C2, V1, V2, N1, N2) :-
     ;   N1 = 0,
         N2 is V1 + V2
     ).
+
+q2([H|T],H,T).
+q2([H|T],E,[H|NT]):-
+    q2(T,E,NT).

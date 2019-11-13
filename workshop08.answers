@@ -14,7 +14,7 @@ ANSWER
 sumlist(List, Sum) :-
 	sumlist(List, 0, Sum).
 
-sumlist([], Sum, Sum).
+sumlist7 Sum, Sum).
 sumlist([N|Ns], Sum0, Sum) :-
 	Sum1 is Sum0 + N,
 	sumlist(Ns, Sum1, Sum).

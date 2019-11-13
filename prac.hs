@@ -60,3 +60,22 @@ sqrtPM x
 
 -- allSqrts lst = foldr1 ((++).sqrtPM) lst
 allSqrts xs = foldl (++) [] (map sqrtPM xs)
+
+
+--ws11 q1 fib
+fiblist 0 = []
+fiblist n = fiblist (n-1) ++  [(fib n)]
+
+fib 1 = 0
+fib 2 = 1
+fib n | n>1 = (fib (n-1)) + (fib (n-2))
+
+
+
+fibs :: Int -> [Integer]
+fibs 0 = []
+fibs 1 = [0]
+fibs n | n > 1 = 0:1:fibs1 0 1 (n-2)
+
+fibs1 fpp fp 0 = []
+fibs1 fpp fp n = (fpp+fp) : fibs1 fp (fpp+fp) (n-1)
